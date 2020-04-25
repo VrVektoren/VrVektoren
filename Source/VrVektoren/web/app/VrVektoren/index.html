@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Available on https://vr-vektoren.ch/app/VrVektoren/ -->
+    <meta charset="UTF-8" />
+    <title>VR Vektoren</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#d3d3d3" />
+    <meta name="msapplication-TileColor" content="#d3d3d3" />
+    <meta name="msapplication-navbutton-color" content="#d3d3d3" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#d3d3d3" />
+    <meta name="author" content="Thomas, Lukas, Yannick" />
+    <meta name="description" content="VR Vektoren IDPA" />
+    <meta name="image" content="https://vr-vektoren.ch/app/VrVektoren/icon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://vr-vektoren.ch/app/VrVektoren/icon.png" />
+    <link rel="stylesheet" type="text/css" href="https://vr-vektoren.ch/app/VrVektoren/default.css" />
+  </head>
+
+  <body>
+    <div class="middle">
+      <h1>
+        VR Vektoren
+      </h1>
+      <div class="button">
+        <a href="#">
+          <span class="description">PDF</span>
+          <span class="logo"><img src="/app/VrVektoren/icon.png" alt="App PDF Icon"/></span>
+        </a>
+      </div>
+      <div class="button">
+        <a href="#" style="color: #FF652F">
+          <span class="description">App Download</span>
+          <span class="logo"><img src="/app/VrVektoren/icon.png" alt="App Download Icon"/></span>
+        </a>
+      </div>
+      <div class="button">
+        <a id="uriLink" href="vrvektoren://" style="color: #14A76C">
+          <span class="description">Open App</span>
+          <span class="logo"><img src="/app/VrVektoren/icon.png" alt="App Link icon"/></span>
+        </a>
+      </div>
+    </div>
+    <!-- Scipt for exact URI Link & Animation -->
+    <script type="text/javascript">
+    "use strict"; // Enable Strict mode
+
+    // Defines
+    const uriProtocoll = "vrvektoren";
+    const appName = "VrVektoren";
+
+    // Update link
+    let fullPath = window.location.pathname; // Example: tuturial/2
+    let path = fullPath.split(appName + "/")[1]; // Only the part after the App Name
+    let uriLink = document.getElementById("uriLink");
+    uriLink.href = uriProtocoll + "://" + path;
+
+    // Global var
+    document.tableIndex = 0;
+
+    // Slide in middle
+    document.getElementsByClassName("middle")[0].style.top = "-" + document.getElementsByClassName("middle")[0].offsetHeight + "px";
+    document.getElementsByClassName("middle")[0].style.transition = "top 0.4s ease-out";
+
+    // Hide first
+    let buttons = document.getElementsByClassName("button");
+    for(let i = 0; i < buttons.length; i++) {
+      buttons[i].style.opacity = "0";
+    }
+
+    // Show link by link
+    document.show = function () {
+      document.getElementsByClassName("button")[document.tableIndex].style.opacity = 1;
+      document.tableIndex++;
+
+      if (document.getElementsByClassName("button").length > document.tableIndex) {
+        setTimeout(function () {
+          document.show();
+        }, 100);
+      }
+    };
+
+    // make a separate action
+    setTimeout(function () {
+      document.getElementsByClassName("middle")[0].style.top = 0;
+    }, 1);
+
+    setTimeout(function () {
+      document.show();
+    }, 500);
+
+    </script>
+  </body>
+</html>

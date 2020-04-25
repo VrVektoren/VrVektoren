@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(app/VrVektoren/tutorial/[0-9]+)$ /app/VrVektoren/index.html
+RewriteRule ^$ /app/VrVektoren/index.html [R=301]
