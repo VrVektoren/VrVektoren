@@ -2,3 +2,8 @@ RewriteEngine On
 RewriteBase /
 RewriteRule ^(app/VrVektoren/tutorial/[0-9]+)$ /app/VrVektoren/index.html
 RewriteRule ^$ /app/VrVektoren/index.html [R=301]
+
+<FilesMatch "index.html">
+    Header add Link "<https://vr-vektoren.ch/app/VrVektoren/default.css>; rel=preload; as=\"style\">"
+    Header add Link "<https://vr-vektoren.ch/app/VrVektoren/icon.png>; rel=preload; as=\"image\">"
+</FilesMatch>

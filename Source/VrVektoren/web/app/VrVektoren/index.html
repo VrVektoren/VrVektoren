@@ -22,28 +22,28 @@
         VR Vektoren
       </h1>
       <div class="button">
-        <a href="#">
+        <a href="/app/VrVektoren/Handout.pdf">
           <span class="description">PDF</span>
-          <span class="logo"><img src="/app/VrVektoren/icon.png" alt="App PDF Icon"/></span>
+          <span class="logo"><img src="https://vr-vektoren.ch/app/VrVektoren/icon.png" alt="App PDF Icon"/></span>
         </a>
       </div>
       <div class="button">
-        <a href="#" style="color: #FF652F">
+        <a href="/app/VrVektoren/VrVektoren.apk" style="color: #FF652F">
           <span class="description">App Download</span>
-          <span class="logo"><img src="/app/VrVektoren/icon.png" alt="App Download Icon"/></span>
+          <span class="logo"><img src="https://vr-vektoren.ch/app/VrVektoren/icon.png" alt="App Download Icon"/></span>
         </a>
       </div>
       <div class="button">
         <a id="uriLink" href="vrvektoren://" style="color: #14A76C">
           <span class="description">Open App</span>
-          <span class="logo"><img src="/app/VrVektoren/icon.png" alt="App Link icon"/></span>
+          <span class="logo"><img src="https://vr-vektoren.ch/app/VrVektoren/icon.png" alt="App Link icon"/></span>
         </a>
       </div>
     </div>
     <!-- Scipt for exact URI Link & Animation -->
     <script type="text/javascript">
     "use strict"; // Enable Strict mode
-
+    
     // Defines
     const uriProtocoll = "vrvektoren";
     const appName = "VrVektoren";
@@ -61,7 +61,7 @@
     document.getElementsByClassName("middle")[0].style.top = "-" + document.getElementsByClassName("middle")[0].offsetHeight + "px";
     document.getElementsByClassName("middle")[0].style.transition = "top 0.4s ease-out";
 
-    // Hide first
+    // Hide first    
     let buttons = document.getElementsByClassName("button");
     for(let i = 0; i < buttons.length; i++) {
       buttons[i].style.opacity = "0";

@@ -1,3 +1,19 @@
+:root {
+    --background-color: #373737;
+    --banner-color: #272727;
+    --spacer-color: #171717;
+    --text-color: grey;
+}
+
+/* @media (prefers-color-scheme: light) {
+    :root {
+        --background-color: #ffffff;
+        --banner-color: #E8E8E8;
+        --spacer-color: #D7D7D7;
+        --text-color: #707070;
+    }
+} */
+
 html {
     height:100%;
     min-height:100%;
@@ -5,12 +21,12 @@ html {
     padding: 0;
 }
 body {
-    background-color: #373737;
+    background-color: var(--background-color);
     font-size: 24px;
     min-width: 150px;
 }
 div.middle {
-    background-color: #272727;
+    background-color: var(--banner-color);
     position: absolute;
     left: 12%;
     width: 76%;
@@ -21,8 +37,8 @@ div.button{
     position: static;
     box-sizing: border-box;
     height: 6.2em;
-    border-bottom: 0.2em solid #171717;
-    background-color: #272727;
+    border-bottom: 0.2em solid var(--spacer-color);
+    background-color: var(--banner-color);
 }
 div.button a {
     display: inline-block;
@@ -31,18 +47,17 @@ div.button a {
     width: 100%;
     height: 4em;
     text-decoration: none;
-    background-color: #272727;
+    background-color: var(--banner-color);
     font-size: 1.5em;
-    color: #FFE400;
     padding: 0.8em;
 }
 h1 {
     padding: 0.5em;
     padding-bottom: 1em;
     margin: 0;
-    color: grey;
+    color: var(--text-color);
     font-size: 2.5em;
-    border-bottom: 0.08em solid #171717;
+    border-bottom: 0.08em solid var(--spacer-color);
 }
 span.logo {
     position: absolute;
@@ -54,7 +69,36 @@ span.logo {
     left: 0.2em;
 }
 span.description {
-    color: grey;
+    color: var(--text-color);
+    font-size: 1.5em;
+    position: absolute;
+    left: 2.5em;
+    top: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+span.logo img {
+    margin-top: 0.3em;
+    width: 1em;
+}
+
+@media (max-width: 550px) {
+    div.middle {
+        left: 0;
+        width: 100%;
+    }
+}
+span.logo {
+    position: absolute;
+    font-size: 2.5em;
+    padding: 0;
+    margin-right: 0.8em;
+    margin-top: 0;
+    top: 0;
+    left: 0.2em;
+}
+span.description {
+    color: var(--text-color);
     font-size: 1.5em;
     position: absolute;
     left: 2.5em;
