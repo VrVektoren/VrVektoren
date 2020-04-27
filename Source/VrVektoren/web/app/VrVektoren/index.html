@@ -54,39 +54,42 @@
     let uriLink = document.getElementById("uriLink");
     uriLink.href = uriProtocoll + "://" + path;
 
-    // Global var
-    document.tableIndex = 0;
+    // No animation with reduced motion
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      // Global var
+      document.tableIndex = 0;
 
-    // Slide in middle
-    document.getElementsByClassName("middle")[0].style.top = "-" + document.getElementsByClassName("middle")[0].offsetHeight + "px";
-    document.getElementsByClassName("middle")[0].style.transition = "top 0.4s ease-out";
+      // Slide in middle
+      document.getElementsByClassName("middle")[0].style.top = "-" + document.getElementsByClassName("middle")[0].offsetHeight + "px";
+      document.getElementsByClassName("middle")[0].style.transition = "top 0.4s ease-out";
 
-    // Hide first    
-    let buttons = document.getElementsByClassName("button");
-    for(let i = 0; i < buttons.length; i++) {
-      buttons[i].style.opacity = "0";
-    }
-
-    // Show link by link
-    document.show = function () {
-      document.getElementsByClassName("button")[document.tableIndex].style.opacity = 1;
-      document.tableIndex++;
-
-      if (document.getElementsByClassName("button").length > document.tableIndex) {
-        setTimeout(function () {
-          document.show();
-        }, 100);
+      // Hide first    
+      let buttons = document.getElementsByClassName("button");
+      for(let i = 0; i < buttons.length; i++) {
+        buttons[i].style.opacity = "0";
       }
-    };
 
-    // make a separate action
-    setTimeout(function () {
-      document.getElementsByClassName("middle")[0].style.top = 0;
-    }, 1);
+      // Show link by link
+      document.show = function () {
+        document.getElementsByClassName("button")[document.tableIndex].style.opacity = 1;
+        document.tableIndex++;
 
-    setTimeout(function () {
-      document.show();
-    }, 500);
+        if (document.getElementsByClassName("button").length > document.tableIndex) {
+          setTimeout(function () {
+            document.show();
+          }, 100);
+        }
+      };
+
+      // make a separate action
+      setTimeout(function () {
+        document.getElementsByClassName("middle")[0].style.top = 0;
+      }, 1);
+
+      setTimeout(function () {
+        document.show();
+      }, 500);
+    }
 
     </script>
   </body>
