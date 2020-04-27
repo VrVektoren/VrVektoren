@@ -4,15 +4,14 @@
     --spacer-color: #171717;
     --text-color: grey;
 }
-
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
     :root {
-        --background-color: #ffffff;
-        --banner-color: #E8E8E8;
-        --spacer-color: #D7D7D7;
+        --background-color: #f7f7f7;
+        --banner-color: #ffffff;
+        --spacer-color: #B0B0B0;
         --text-color: #707070;
     }
-} */
+}
 
 html {
     height:100%;
