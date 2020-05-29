@@ -45,11 +45,11 @@
         ],
         "exclude": [
           "obj/**",
-          "Source/VrVektoren/web/Dok/**"
+          "docs/**"
         ]
       }
     ],
-    "dest": "Source/VrVektoren/web/Dok",
+    "dest": "docs",
     "globalMetadataFiles": ["docFxGlobalMetadata"],
     "fileMetadataFiles": [],
     "template": [

@@ -1,0 +1,30 @@
+# Used to keep the Documentation always up to date
+# Source https://github.com/marketplace/actions/docfx-action
+name: Generate Documentation
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  generateDocumentation:
+    runs-on: ubuntu-latest
+    name: Generate Documentation
+    steps:
+    - uses: actions/checkout@v1
+    # ...
+    - uses: nikeee/docfx-action@master
+      name: Build Documentation
+      with:
+        args: docfx.json
+    
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v4
+      with:
+        author_name: Documentation Bot
+        author_email: buerli16@gmail.com
+        message: "Update Documentation"
+        add: "docs/*"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}

@@ -3,7 +3,7 @@ A learning tool for vector geometry, built as a school projekt.
 Sourcecode for the APP: **VR Vektoren**
 
 - Official website: [https://vr-vektoren.ch](https://vr-vektoren.ch)
-- Documentation: [VrVektoren DocFx](http://vr-vektoren.ch/Dok/api/VrVektoren.Behaviours.html)
+- Documentation: [VrVektoren DocFx](http://http://vrvektoren.github.io/VrVektoren.Behaviours.html)
 
 ## Getting Started
 
@@ -13,7 +13,6 @@ The Unity Projekt is located in the folder: **/Source/VrVektoren**
 
 - Unity Version: **2019.2.6f1**
 not tested with newest version
-- DocFx for generating the Documentation
 
 ### App Navigation
 
@@ -26,12 +25,6 @@ Look around aud use the touch as a singe button to navigate in the virtual world
 ## Deployment
 
 [VR Vektoren Readme](./Source/VrVektoren/README.md)
-
-## Generate Documentation
-Install DocFx form https://dotnet.github.io/docfx
-``` bash
-generateDok.bat
-```
 
 ## Authors
 
