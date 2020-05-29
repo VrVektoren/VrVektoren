@@ -1,0 +1,35 @@
+# Used to keep the Documentation always up to date
+name: Generate Dokumentation
+
+on: push
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Choco help
+        uses: crazy-max/ghaction-chocolatey@v1
+        with:
+          args: -h
+      -
+        name: Choco install docFx
+        uses: crazy-max/ghaction-chocolatey@v1
+        with:
+          args: install docfx -y
+      -
+        name: Generate Dok
+        run: generateDok.bat
+      -
+        name: Commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: Dokumentation Bot
+          author_email: buerli16@gmail.com
+          message: "Upate Dokumentation"
+          add: "Source/VrVektoren/web/Dok/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
