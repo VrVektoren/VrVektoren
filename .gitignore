@@ -37,3 +37,7 @@ sysinfo.txt
 
 # Keep full web dir
 !Source/VrVektoren/web/*
+
+# DocFx
+Api
+obj

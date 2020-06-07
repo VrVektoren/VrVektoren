@@ -1,0 +1,38 @@
+# Used to keep the Documentation always up to date
+# Source https://github.com/marketplace/actions/docfx-action
+name: Generate Documentation
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  generateDocumentation:
+    runs-on: ubuntu-latest
+    name: Generate Documentation
+    steps:
+    - name: Checkout VrVektoren
+      uses: actions/checkout@v2
+
+    - name: Checkout Dokumenation
+      uses: actions/checkout@v2
+      with:
+        repository: VrVektoren/VrVektoren.github.io
+        path: docs
+
+    - uses: nikeee/docfx-action@master
+      name: Build Documentation
+      with:
+        args: docfx.json
+    
+    - name: Commit Documenation
+      uses: EndBug/add-and-commit@v4
+      with:
+        author_name: VrVektoren Bot
+        author_email: buerli16@gmail.com
+        message: "Update Documentation for VrVektoren Repository"
+        cwd: "./docs"
+        add: "*"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}

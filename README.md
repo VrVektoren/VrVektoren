@@ -2,7 +2,8 @@
 A learning tool for vector geometry, built as a school projekt.
 Sourcecode for the APP: **VR Vektoren**
 
-Official website: [https://vr-vektoren.ch](https://vr-vektoren.ch)
+- Official website: [https://vr-vektoren.ch](https://vr-vektoren.ch)
+- Documentation: [VrVektoren DocFx](https://vrvektoren.github.io/VrVektoren.Behaviours.html)
 
 ## Getting Started
 
@@ -10,8 +11,7 @@ The Unity Projekt is located in the folder: **/Source/VrVektoren**
 
 ### Prerequisites
 
-Install Unity Version: **2019.2.6f1**
-
+- Unity Version: **2019.2.6f1**
 not tested with newest version
 
 ### App Navigation
