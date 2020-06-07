@@ -32,4 +32,4 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.GH_PAT }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        args: docs VrVektoren VrVektoren.github.io
+        args: docs VrVektoren
