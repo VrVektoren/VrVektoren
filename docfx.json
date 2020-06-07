@@ -12,7 +12,7 @@
           ]
         }
       ],
-      "dest": "Api",
+      "dest": "api",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
@@ -21,32 +21,38 @@
     "content": [
       {
         "files": [
-          "Api/**.yml",
-          "Api/index.md"
+          "api/**.yml",
+          "api/index.md"
         ]
       },
       {
         "files": [
-          "Articles/**.md"
+          "articles/**.md"
         ]
       },
       {
         "files": [
-          "toc.yml"
+          "toc.yml",
+          "index.md"
         ]
       }
     ],
     "resource": [
       {
         "files": [
-          "Images/**"
+          "images/**"
+        ]
+      },
+      {
+        "files": [
+          "favicon.ico"
         ]
       }
     ],
     "overwrite": [
       {
         "files": [
-          "Apidoc/**.md"
+          "apidoc/**.md"
         ],
         "exclude": [
           "obj/**",
