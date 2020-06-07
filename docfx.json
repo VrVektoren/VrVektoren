@@ -29,6 +29,11 @@
         "files": [
           "Articles/**.md"
         ]
+      },
+      {
+        "files": [
+          "toc.yml"
+        ]
       }
     ],
     "resource": [

@@ -1,5 +1,5 @@
 {
     "_appTitle": "VR Vektoren",
-    "_appLogoPath": "../favicon.ico",
+    "_appLogoPath": "./Source/VrVektoren/web/favicon.ico",
     "_enableSearch": "true"
 }
