@@ -3,7 +3,7 @@ A learning tool for vector geometry, built as a school projekt.
 Sourcecode for the APP: **VR Vektoren**
 
 - Official website: [https://vr-vektoren.ch](https://vr-vektoren.ch)
-- Documentation: [VrVektoren DocFx](https://vrvektoren.github.io/VrVektoren.Behaviours.html)
+- Documentation: [VrVektoren DocFx](https://vrvektoren.github.io/index.html)
 
 ## Getting Started
 
