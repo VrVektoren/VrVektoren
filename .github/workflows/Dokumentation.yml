@@ -31,6 +31,6 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         ACCESS_TOKEN: ${{ secrets.GH_PAT }}
-        FOLDER: docs
         REPOSITORY_NAME: VrVektoren/VrVektoren.github.io
-        BASE_BRANCH: master
+        FOLDER: docs
+        BRANCH: master
