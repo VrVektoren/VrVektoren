@@ -33,3 +33,4 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.GH_PAT }}
         FOLDER: docs
         REPOSITORY_NAME: VrVektoren/VrVektoren.github.io
+        BASE_BRANCH: master
