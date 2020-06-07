@@ -1,5 +1,5 @@
 - name: Home
-  href: articles/Home.md
+  href: articles/index.md
 - name: Articles
   href: articles/
 - name: Api Documentation
