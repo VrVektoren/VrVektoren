@@ -27,12 +27,9 @@ jobs:
         args: docfx.json
     
     - name: Commit Documenation
-      uses: EndBug/add-and-commit@v4
-      with:
-        author_name: VrVektoren Bot
-        author_email: buerli16@gmail.com
-        message: "Update Documentation for VrVektoren Repository"
-        cwd: "./docs"
-        add: "*"
+      uses: johno/actions-push-subdirectories@master
       env:
+        API_TOKEN_GITHUB: ${{ secrets.GH_PAT }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        args: docs VrVektoren VrVektoren.github.io
