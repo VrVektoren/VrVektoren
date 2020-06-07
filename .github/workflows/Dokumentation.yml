@@ -14,10 +14,13 @@ jobs:
     steps:
     - name: Checkout VrVektoren
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false
 
     - name: Checkout Dokumenation
       uses: actions/checkout@v2
       with:
+        persist-credentials: false
         repository: VrVektoren/VrVektoren.github.io
         path: docs
 
@@ -29,8 +32,6 @@ jobs:
     - name: Deploy Documenation
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SSH: false
         ACCESS_TOKEN: ${{ secrets.GH_PAT }}
         REPOSITORY_NAME: VrVektoren/VrVektoren.github.io
         FOLDER: docs
