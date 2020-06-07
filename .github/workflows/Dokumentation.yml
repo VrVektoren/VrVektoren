@@ -30,6 +30,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SSH: false
         ACCESS_TOKEN: ${{ secrets.GH_PAT }}
         REPOSITORY_NAME: VrVektoren/VrVektoren.github.io
         FOLDER: docs
