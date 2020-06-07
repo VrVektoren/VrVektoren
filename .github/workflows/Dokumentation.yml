@@ -26,10 +26,10 @@ jobs:
       with:
         args: docfx.json
     
-    - name: Commit Documenation
-      uses: johno/actions-push-subdirectories@master
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.GH_PAT }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Deploy Documenation
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        args: docs VrVektoren
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+        FOLDER: docs
+        REPOSITORY_NAME: VrVektoren/VrVektoren.github.io
